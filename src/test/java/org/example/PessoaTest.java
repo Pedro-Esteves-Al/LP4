@@ -35,7 +35,7 @@ class PessoaTest {
         assertEquals("obeso", pessoa.calcularImc());
     }
 
-    
+
 
     @Test
     public void deveTestarMulherAbaixoPeso() {
