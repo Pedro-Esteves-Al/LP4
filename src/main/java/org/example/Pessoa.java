@@ -32,6 +32,9 @@ public class Pessoa {
     }
 
     public void setSexo(String sexo) {
+        if (!(sexo.equals("M") || sexo.equals("F"))) {
+            throw new IllegalArgumentException("Sexo invalido");
+        }
         this.sexo = sexo;
     }
 

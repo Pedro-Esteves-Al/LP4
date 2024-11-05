@@ -1,10 +1,19 @@
 package org.example;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PessoaTest {
+    /*Pessoa pessoa;
+
+//isso aqui foi rodar antes de cada teste, útil para quando vc tem uma repetição
+    @BeforeEach
+    void setUp() {
+        pessoa = new Pessoa();
+    }*/
+
     @Test
     public void deveTestarMasculinoAbaixoPeso() {
         Pessoa pessoa = new Pessoa(20.5f, 1.0f, "M");
@@ -62,5 +71,17 @@ class PessoaTest {
     public void deveTestarMulherObeso() {
         Pessoa pessoa = new Pessoa(32.3f, 1.0f, "F");
         assertEquals("obeso", pessoa.calcularImc());
+    }
+
+    @Test
+    void deveRetornarExcecaoSexoInvalido() {
+        try {
+            Pessoa pessoa = new Pessoa(30.0f,1.0f,"K");
+            pessoa.setSexo("");
+            fail();
+        }
+        catch (IllegalArgumentException e) {
+            assertEquals("Sexo invalido", e.getMessage());
+        }
     }
 }
