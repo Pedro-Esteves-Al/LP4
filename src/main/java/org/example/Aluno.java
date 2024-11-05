@@ -5,7 +5,7 @@ public class Aluno {
     private double nota2;
     private double frequencia;
 
-    Aluno aluno () {
+    public Aluno() {
         this.nota1 = 0;
         this.nota2 = 0;
         this.frequencia = 0;
