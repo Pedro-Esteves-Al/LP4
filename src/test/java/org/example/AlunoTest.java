@@ -38,8 +38,8 @@ class AlunoTest {
     @Test
     public void deveTestarAprovado() {
         aluno.setFrequencia(75);
-        aluno.setNota1(60);
-        aluno.setNota2(60);
+        aluno.setNota1(90);
+        aluno.setNota2(89);
         assertEquals("Aprovado",aluno.informaEstadoAluno());
     }
 
